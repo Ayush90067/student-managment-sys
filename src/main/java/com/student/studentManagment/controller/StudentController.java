@@ -1,7 +1,6 @@
 package com.student.studentManagment.controller;
 
 import com.student.studentManagment.model.Student;
-import com.student.studentManagment.repository.StudentRepository;
 import com.student.studentManagment.service.StudentService;
 import org.springframework.web.bind.annotation.*;
 
@@ -38,7 +37,7 @@ public class StudentController {
     //delete by id
     @DeleteMapping("/{id}")
     public String deleteStudent(@PathVariable Long id){
-        service.delet(id);
+        service.delete(id);
         return "Deleted succesfully";
     }
 }
